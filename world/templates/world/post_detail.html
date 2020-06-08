@@ -4,6 +4,7 @@
 <div class="post">
         {% if det.published_date %}
                <div class="date">
+                    <a href="{% url 'post_edit' pk=det.pk %}" class="pencil btn btn-default"><span class="glyphicon glyphicon-pencil"></span></a>
                     Publicado el {{ det.published_date }} por {{ det.author }} de indice {{ det.pk }}
                 </div>
         {% endif %}
