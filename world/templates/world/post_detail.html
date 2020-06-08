@@ -1,14 +1,16 @@
 {% extends 'world/base.html' %}
 
 {% block content %}
-<div class="post">
         {% if det.published_date %}
-               <div class="date">
                     <a href="{% url 'post_edit' pk=det.pk %}" class="pencil btn btn-default"><span class="glyphicon glyphicon-pencil"></span></a>
-                    Publicado el {{ det.published_date }} por {{ det.author }} de indice {{ det.pk }}
-                </div>
+                    <div class="publi">
+                        <div class="date">
+                            Publicado el {{ det.published_date }} por {{ det.author }} 
+                        </div>
+                    </div>
+                    <div class="postpubli">
+                       <h1><p>{{ det.title }}</p></h1>
+                       <p>{{ det.text|linebreaksbr }}</p>
+                    </div>
         {% endif %}
-        <h1>{{ det.title }}</h1>
-        <p>{{ det.text|linebreaksbr }}</p>
-    </div>
 {% endblock %}

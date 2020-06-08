@@ -4,7 +4,8 @@ h1 a {
 }
 
 body {
-    padding-left: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .page-header {
@@ -20,7 +21,8 @@ body {
 }
 
 .content {
-    margin-left: 40px;
+    margin-left: 25px;
+    margin-top: 45px;
 }
 
 h1, h2, h3, h4 {
@@ -35,6 +37,19 @@ h1, h2, h3, h4 {
     float: right;
 }
 
+.publi {
+    float: right;
+    margin-right:5px;
+    margin-top:15px;
+}
+
+.postpubli {
+     margin-top:60px;
+     margin-bottom: 50px;
+     margin-left:40px;
+     margin-right:40px;
+}
+
 .post-form textarea, .post-form input {
     width: 100%;
 }
@@ -44,10 +59,14 @@ h1, h2, h3, h4 {
     float: right;
     font-size: 26pt;
     margin-right: 20px;
+    margin-top: 20px;
 }
 
 .post {
-    margin-bottom: 70px;
+    margin-top:60px;
+    margin-bottom: 55px;
+    margin-left:40px;
+    margin-right:40px;
 }
 
 .post h1 a, .post h1 a:visited {
@@ -56,8 +75,8 @@ h1, h2, h3, h4 {
 
 .pencil {
     float: right;
-    font-size: 20pt;
-    margin-right: 20px;
+    font-size: 15pt;
+    margin-right:30px;
 }
     
 
