@@ -1,0 +1,13 @@
+{% extends 'world/base.html' %}
+
+{% block content %}
+<div class="post">
+        {% if det.published_date %}
+               <div class="date">
+                    Publicado el {{ det.published_date }} por {{ det.author }} de indice {{ det.pk }}
+                </div>
+        {% endif %}
+        <h1>{{ det.title }}</h1>
+        <p>{{ det.text|linebreaksbr }}</p>
+    </div>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends 'world/base.html' %}
+
+{% block content %}
+    {% for x in var %}
+        <div class="post">
+            <h1><a href="{% url 'post_detail' ok=x.pk %}">{{ x.title }}</a></h1>
+            <p>{{ x.text|linebreaksbr }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}
