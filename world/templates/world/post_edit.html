@@ -1,14 +1,16 @@
 {% extends 'world/base.html' %}
 
 {% block content %}
-    <div class="content container"> 
+    <!-- <div class="content container"> -->
         <div class="row"> 
-            <div class="col-md-8">
+            <div class="col-md-8"> 
+            <div class="new">
                 <h1>New post</h1>
                 <form method="POST" class="post-form">
                     {% csrf_token %} {{ form.as_p }}
                     <button type="submit" class="save btn btn-default">Save</button>
                 </form>
+           </div>
            </div> 
         </div> 
     </div> 

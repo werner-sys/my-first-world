@@ -8,9 +8,14 @@
                             Publicado el {{ det.published_date }} por {{ det.author }} 
                         </div>
                     </div>
+
                     <div class="postpubli">
-                       <h1><p>{{ det.title }}</p></h1>
-                       <p>{{ det.text|linebreaksbr }}</p>
+                        <!-- <div class="post"> -->
+                           
+                           <h1>{{ det.title }}   <a  href="{% url 'post_descarga' path=det.upload %}"><span class="glyphicon glyphicon-play-circle"></span></a></h1>
+                           <p>{{ det.text|linebreaksbr }}</p>
+                           
+                        <!-- </div> -->
                     </div>
         {% endif %}
 {% endblock %}

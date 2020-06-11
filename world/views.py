@@ -1,8 +1,11 @@
-from world.models import Post
+import os
+from django.conf import settings
+from django.http import HttpResponse, Http404
+from .models import Post
 from django.utils import timezone
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from .forms import PostForm
-from django.shortcuts import redirect
+
 
 
 def post_list(request):
@@ -40,4 +43,15 @@ def post_edit(request, pk):
         else:
             form = PostForm(instance=post)
         return render(request, 'world/post_edit.html', {'form': form})
+
+def bajar(request, path):
+    file_path = os.path.join(settings.MEDIA_ROOT, path)
+    if os.path.exists(file_path):
+        with open(file_path, 'rb') as fh:
+            response = HttpResponse(fh.read(), content_type="mp3")
+            response['Content-Disposition'] = 'inline; filename=' + os.path.basename(file_path)
+            return response
+    raise Http404
    
+
+    

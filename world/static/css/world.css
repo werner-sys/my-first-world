@@ -3,9 +3,14 @@ h1 a {
     font-family: 'Lobster';
 }
 
+p {
+    color: #828282;
+}
+    
+
 body {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 60px;
+    padding-right: 60px;
 }
 
 .page-header {
@@ -45,7 +50,7 @@ h1, h2, h3, h4 {
 
 .postpubli {
      margin-top:60px;
-     margin-bottom: 50px;
+     margin-bottom: 55px;
      margin-left:40px;
      margin-right:40px;
 }
@@ -79,6 +84,10 @@ h1, h2, h3, h4 {
     margin-right:30px;
 }
     
-
+.new {
+    margin-top:40px;
+    margin-left:40px;
+    margin-right:40px;
+}
 
      
